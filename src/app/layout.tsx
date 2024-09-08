@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import "../styles/globals.css";
 
-
 import Profile from "@/components/profile";
 
 export const metadata: Metadata = {
@@ -18,7 +17,6 @@ import {
   montserrat,
 } from "./fonts";
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,20 +30,19 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* <Header /> */}
 
-          <div className="flex bg-black text-white">
-            {/* <SideNav /> */}
-            <div className="flex  py-10 h-screen  flex-col space-y-2 px-10 w-96">
-              <Profile />
-            </div>
-            <div className="w-full overflow-x-auto">
-              <div className="overflow-auto ">
-                <div className="w-full flex justify-center mx-auto  overflow-auto overflow-y-auto ">
-                  <div className="w-full ">{children}</div>
-                </div>
+        <div className="flex bg-black text-white">
+          {/* <SideNav /> */}
+          <div className="flex  py-10 h-screen  flex-col space-y-2 px-10 w-96 sticky top-0">
+            <Profile />
+          </div>
+          <div className="w-full overflow-x-auto">
+            <div className="overflow-auto ">
+              <div className="w-full flex justify-center mx-auto py-10 overflow-auto overflow-y-auto ">
+                {children}
               </div>
             </div>
           </div>
-      
+        </div>
       </body>
     </html>
   );

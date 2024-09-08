@@ -46,8 +46,8 @@ export default function PagePlaceholder({ pageName }: { pageName: string }) {
  console.log(framer)
 
   return (
-    <div className="flex flex-1 py-10 h-screen overflow-hidden flex-col space-y-2 pr-10">
-      <div className=" border border-zinc-500 w-full h-screen rounded-lg bg-[#1F1E1F]">
+    <div className="flex flex-1 h-full max-h-screen flex-col space-y-2 pr-10">
+      <div className=" border border-zinc-500 w-full h-full max-h-screen rounded-lg bg-[#1F1E1F]">
         <div className="flex w-full  h-20  rounded-lg">
           <div className="w-2/5 flex justify-end px-8 flex-col">
             <span className="font-bold text-3xl">{framer.selectedTab.label}</span>
